@@ -1,0 +1,79 @@
+
+body {
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header,
+footer {
+  background-color: black;
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+}
+header nav a,
+footer nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+header nav a:hover,
+footer nav a:hover {
+  text-decoration: underline;
+}
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  flex: 1;
+}
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+.container input[type="file"] {
+  display: none;
+}
+.container label {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+}
+.container label:hover {
+  background-color: #0056b3;
+}
+.container .file-name {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+.container input[type="submit"] {
+  display: inline-block;
+  padding: 12px 25px;
+  color: #fff;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+.container input[type="submit"]:hover {
+  background-color: #0056b3;
+}
