@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF 2 CSV</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header .heading {
+            font-size: 24px;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #007bff;
+        }
+        .container {
+            background-color: #fff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            margin: 30px auto;
+            flex: 1;
+        }
+        .container img {
+            max-width: 70%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .container h1 {
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #495057;
+        }
+        .container input[type="file"] {
+            display: none;
+        }
+        .container label {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-bottom: 15px;
+        }
+        .container label:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        .container .file-name {
+            margin-top: 10px;
+            font-style: italic;
+            color: #6c757d;
+        }
+        .container input[type="submit"] {
+            display: inline-block;
+            padding: 12px 30px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            margin-top: 20px;
+        }
+        .container input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 15px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="heading">PDF 2 CSV</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <div class="container">
+        <img src="static/img.png" alt="PDF2CSV">
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file-input">
+            <label for="file-input">Select File</label>
+            <div class="file-name" id="file-name">(File Name)</div>
+            <input type="submit" value="Upload">
+        </form>
+    </div>
+    <footer>
+        <p>By Team ZEN</p>
+    </footer>
+    <script>
+        document.getElementById('file-input').addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+            document.getElementById('file-name').textContent = fileName;
+        });
+    </script>
+</body>
+</html>

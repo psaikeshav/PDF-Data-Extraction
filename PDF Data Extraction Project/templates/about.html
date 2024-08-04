@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - PDF 2 CSV</title>
+    <style>
+        body {
+            margin: 0;
+            padding-top: 60px; 
+            padding-bottom: 60px; 
+            font-family: sans-serif;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        header .heading {
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin: 0;
+        }
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        header nav a:hover {
+            color: #007bff;
+        }
+        footer {
+            background-color: #343a40;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .content {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content h2 {
+            font-size: 32px;
+            color: #343a40;
+            margin-bottom: 15px;
+        }
+        .content p, .content ol {
+            font-size: 18px; 
+            color: #495057;
+            line-height: 1.8; 
+            margin-bottom: 20px;
+        }
+        .content section {
+            margin-bottom: 40px; 
+        }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            header nav {
+                width: 100%;
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="/" class="heading">PDF 2 CSV</a>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+            <a href="http://" target="_blank" rel="noopener noreferrer"></a>
+        </nav>
+    </header>
+    
+    <div class="content">
+        <section id="about">
+            <h2 style="color: #007bff;">About</h2>
+            <p>PDF 2 CSV is a tool designed to help you convert PDF documents into CSV files easily and efficiently. Our goal is to simplify the process of extracting data from PDFs and making it accessible in a structured format.</p>
+        </section>
+        
+        <section id="how-it-works">
+            <h2 style="color: #007bff;">How It Works</h2>
+            <p>Using PDF 2 CSV is straightforward:</p>
+            <ol>
+                <li>Upload your PDF document using the upload form on the homepage.</li>
+                <li>Our tool will process the PDF and extract the data.</li>
+                <li>Download the resulting CSV file, which will contain the extracted data in a structured format.</li>
+            </ol>
+            <p>Our advanced algorithms ensure that the data extraction is accurate and reliable, saving you time and effort.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>By Team ZEN</p>
+    </footer>
+</body>
+</html>
